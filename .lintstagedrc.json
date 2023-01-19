@@ -1,6 +1,0 @@
-{
-  "src/**/*.{js,ts,json,html,css,scss,md}": [
-    "npm run lint:check",
-    "npm run prettier"
-  ]
-}
