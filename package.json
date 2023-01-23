@@ -3,12 +3,18 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "test": "jest --watchAll --verbose --coverage",
+    "test:nowatch": "jest --watchAll=false",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "lint:check": "eslint --max-warnings 0 --ext ts,html src",
+    "prettier": "prettier --write src",
+    "prepare": "husky install"
   },
   "dependencies": {
     "vue": "^3.2.45",
